@@ -74,7 +74,8 @@ export function create({
         handleCardAction: clientSecret => component.instance.handleCardAction(clientSecret),
         confirmPaymentIntent: (clientSecret, data) => component.instance.confirmPaymentIntent(clientSecret, component.element, data),
         createPaymentMethod: (cardType, data) => component.instance.createPaymentMethod(cardType, component.element, data),
-        confirmCardPayment: (clientSecret, data) => component.instance.confirmCardPayment(clientSecret, data)
+        confirmCardPayment: (clientSecret, data) => component.instance.confirmCardPayment(clientSecret, data),
+        confirmSepaDebitPayment: (clientSecret, data) => component.instance.confirmSepaDebitPayment(clientSecret, data)
     });
 
     Stripe.components.push(component);
